@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-heading">
+  <p class="eyebrow">How your feedback is produced</p>
+  <h1>Methodology</h1>
+  <p class="lede">A transparent, practice-first scoring system that highlights what to keep and what to improve next.</p>
+</section>
+
+<section class="method-grid" aria-label="Scoring dimensions">
+  <article class="info-card">
+    <span class="step-number">01</span>
+    <h2>Relevance</h2>
+    <p>Compares the meaning and vocabulary of your response with the model answer so you stay focused on the question.</p>
+  </article>
+  <article class="info-card">
+    <span class="step-number">02</span>
+    <h2>Completeness</h2>
+    <p>Checks whether the key points in the reference answer are represented in your response.</p>
+  </article>
+  <article class="info-card">
+    <span class="step-number">03</span>
+    <h2>Keyword coverage</h2>
+    <p>Looks for important concepts, tools, outcomes, and role-specific language without rewarding repetition alone.</p>
+  </article>
+  <article class="info-card">
+    <span class="step-number">04</span>
+    <h2>Delivery signals</h2>
+    <p>Reviews answer length and fluency. Behavioral answers also receive a STAR structure check.</p>
+  </article>
+</section>
+
+<section class="panel methodology-section">
+  <div>
+    <p class="eyebrow">The scoring flow</p>
+    <h2>From answer to action plan</h2>
+  </div>
+  <ol class="process-list">
+    <li><strong>Capture.</strong> Your typed answer or transcript is evaluated against the selected question.</li>
+    <li><strong>Measure.</strong> Each dimension is normalized to a 0–100 score, then combined into an overall score.</li>
+    <li><strong>Prioritize.</strong> The lowest-scoring dimension becomes your next improvement focus.</li>
+    <li><strong>Practice.</strong> Gaps, uncovered points, and suggestions turn the score into a concrete next attempt.</li>
+  </ol>
+</section>
+
+<section class="method-grid methodology-details">
+  <article class="panel">
+    <p class="eyebrow">Question bank</p>
+    <h2>Three interview modes</h2>
+    <p>Practice technical, HR, and behavioral questions from the curated local question bank and supplemental set. Behavioral responses are additionally checked for Situation, Task, Action, and Result cues.</p>
+  </article>
+  <article class="panel">
+    <p class="eyebrow">Privacy by design</p>
+    <h2>Your practice stays local</h2>
+    <p>Session metadata, answers, and scores are stored in the app’s SQLite database. Audio is used temporarily for transcription and removed after processing unless explicitly configured otherwise.</p>
+  </article>
+</section>
+{% endblock %}

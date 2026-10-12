@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Mock Interview Assistant{% endblock %}</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="/">Mock Interview Assistant</a>
+      <div class="links">
+        <a class="{% if request.url.path == '/practice' %}active{% endif %}" href="/practice">Practice</a>
+        <a class="{% if request.url.path == '/history' %}active{% endif %}" href="/history">History</a>
+        <a class="{% if request.url.path == '/methodology' %}active{% endif %}" href="/methodology">Methodology</a>
+        <a class="{% if request.url.path == '/session-summary' %}active{% endif %}" href="/session-summary">Session Summary</a>
+        {% if request.state.user %}
+          <span class="nav-user">{{ request.state.user.username }}</span>
+          <button id="logoutButton" class="text-button" type="button">Log out</button>
+        {% else %}
+          <a class="button button-small" href="/login">Log in</a>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+  <main class="container">{% block content %}{% endblock %}</main>
+  <footer class="footer">
+    <div class="container">Privacy-first mock interview feedback.</div>
+  </footer>
+  {% if request.state.user %}<script>
+    document.getElementById('logoutButton')?.addEventListener('click', async () => {
+      await fetch('/api/auth/logout', { method: 'POST' });
+      window.location.href = '/login';
+    });
+  </script>{% endif %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-heading summary-heading">
+  <p class="eyebrow">Review your progress</p>
+  <h1>Session summary</h1>
+  <p class="lede">A compact view of your practice run, including your strongest signals and the next best focus area.</p>
+</section>
+<div id="summaryStatus" class="status" aria-live="polite">Loading session summary...</div>
+<section id="summaryContent" class="hidden" aria-live="polite">
+  <div class="summary-hero panel">
+    <div>
+      <p class="eyebrow">Practice session</p>
+      <h2 id="sessionTitle"></h2>
+      <p id="sessionMeta" class="muted"></p>
+    </div>
+    <div class="score-orb">
+      <strong id="sessionScore">—</strong>
+      <span>overall</span>
+    </div>
+  </div>
+  <div id="summaryStats" class="metric-grid"></div>
+  <div class="summary-columns">
+    <section class="panel">
+      <p class="eyebrow">Attempts</p>
+      <h2>Question-by-question review</h2>
+      <div id="attemptList" class="attempt-list"></div>
+    </section>
+    <aside class="panel focus-panel">
+      <p class="eyebrow">Next focus</p>
+      <h2 id="focusTitle">—</h2>
+      <p id="focusText" class="muted">Complete an attempt to receive a personalized focus area.</p>
+      <a class="button" href="/practice">Practice again</a>
+    </aside>
+  </div>
+</section>
+<script>
+  window.SUMMARY_SESSION_ID = {{ latest_session_id | tojson }};
+</script>
+<script src="/static/summary.js"></script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Log in · Mock Interview Assistant{% endblock %}
+{% block content %}
+<section class="auth-layout">
+  <div class="auth-copy">
+    <p class="eyebrow">Private practice space</p>
+    <h1>Keep your progress in one place.</h1>
+    <p class="lede">Log in to save interview sessions, review feedback, and manage your practice history.</p>
+  </div>
+  <section class="panel auth-panel" aria-labelledby="authTitle">
+    <div class="auth-tabs" role="tablist">
+      <button class="auth-tab active" type="button" data-mode="login">Log in</button>
+      <button class="auth-tab" type="button" data-mode="register">Create account</button>
+    </div>
+    <h2 id="authTitle">Welcome back</h2>
+    <p id="authHint" class="muted">Use your account to continue practicing.</p>
+    <form id="authForm">
+      <label>Username<input id="username" name="username" autocomplete="username" required minlength="3" maxlength="40" /></label>
+      <label>Password<input id="password" name="password" type="password" autocomplete="current-password" required minlength="8" /></label>
+      <button id="authSubmit" class="button" type="submit">Log in</button>
+    </form>
+    <p id="authStatus" class="form-status" aria-live="polite"></p>
+  </section>
+</section>
+<script src="/static/auth.js"></script>
+{% endblock %}

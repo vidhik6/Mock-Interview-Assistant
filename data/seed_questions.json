@@ -1,0 +1,128 @@
+[
+  {
+    "id": "seed-tech-1",
+    "category": "technical",
+    "subcategory": "python",
+    "question": "How do you improve the performance of a slow Python service?",
+    "reference_answer": "I would profile the service first to identify CPU, memory, database, and network bottlenecks rather than guessing. I would then optimize the highest-impact path, add appropriate caching or batching, and verify the change with representative benchmarks. Finally, I would add monitoring so regressions are visible after deployment.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-tech-2",
+    "category": "technical",
+    "subcategory": "apis",
+    "question": "What makes an API reliable for clients?",
+    "reference_answer": "A reliable API uses clear resource-oriented contracts, consistent status codes, validation, authentication, and useful error messages. It should define timeouts, retries, idempotency, and pagination where appropriate. Automated contract tests, observability, and backward-compatible versioning help clients depend on it safely.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-tech-3",
+    "category": "technical",
+    "subcategory": "databases",
+    "question": "How would you investigate a database query that suddenly became slow?",
+    "reference_answer": "I would compare the current query plan with a healthy baseline and inspect indexes, table statistics, data volume, locks, and recent code or schema changes. I would reproduce the issue with realistic parameters, then test an index or query change safely. I would monitor latency after deployment and keep a rollback path.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-tech-4",
+    "category": "technical",
+    "subcategory": "testing",
+    "question": "How do you decide what to test in a new feature?",
+    "reference_answer": "I start with the feature's acceptance criteria and highest-risk user flows. I cover core business logic with focused unit tests, interactions between components with integration tests, and one representative end-to-end path when it adds value. I also include validation, error, permission, and regression cases rather than testing only the happy path.",
+    "source": "local_seed",
+    "difficulty": "easy"
+  },
+  {
+    "id": "seed-tech-5",
+    "category": "technical",
+    "subcategory": "security",
+    "question": "What are practical ways to protect a web application from common attacks?",
+    "reference_answer": "I would validate input at trust boundaries, use parameterized queries, encode output, enforce authentication and authorization, and protect secrets through environment or secret-management systems. I would configure secure cookies, CSRF protection where relevant, rate limits, dependency updates, logging, and security testing. Defense in depth matters because no single control is sufficient.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-tech-6",
+    "category": "technical",
+    "subcategory": "architecture",
+    "question": "When would you choose a queue for a backend workflow?",
+    "reference_answer": "I would use a queue when work can be processed asynchronously, may take longer than a request timeout, or needs buffering during traffic spikes. The design should include durable messages, retries with backoff, idempotent consumers, dead-letter handling, and visibility into queue depth and processing failures. I would keep synchronous work only where the user needs an immediate result.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-hr-1",
+    "category": "hr",
+    "subcategory": "communication",
+    "question": "How do you explain a technical decision to a non-technical stakeholder?",
+    "reference_answer": "I begin with the outcome and user or business impact rather than implementation details. I explain the main options, tradeoffs, risks, and recommendation in plain language, using a concrete example or simple visual when helpful. I check understanding, invite concerns, and document the decision so expectations remain clear.",
+    "source": "local_seed",
+    "difficulty": "easy"
+  },
+  {
+    "id": "seed-hr-2",
+    "category": "hr",
+    "subcategory": "feedback",
+    "question": "How do you respond to critical feedback?",
+    "reference_answer": "I try to listen without becoming defensive and ask clarifying questions about the observed behavior and its impact. I identify the part I can change, agree on a concrete action, and follow up later to check whether the improvement is visible. If I disagree, I explain my reasoning respectfully while staying open to evidence.",
+    "source": "local_seed",
+    "difficulty": "easy"
+  },
+  {
+    "id": "seed-hr-3",
+    "category": "hr",
+    "subcategory": "priorities",
+    "question": "How do you prioritize when everything seems urgent?",
+    "reference_answer": "I clarify the desired outcome, deadlines, customer impact, dependencies, and cost of delay for each request. I make the tradeoffs visible, propose a ranked plan, and confirm priorities with the responsible stakeholder. I then focus on the highest-value work, communicate changes early, and revisit the plan as new information arrives.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-hr-4",
+    "category": "hr",
+    "subcategory": "growth",
+    "question": "What skill are you currently developing?",
+    "reference_answer": "I am developing my ability to communicate technical tradeoffs earlier in a project. I practice by writing short design notes, asking for feedback before implementation, and summarizing decisions for different audiences. This has helped me reduce rework and make collaboration more predictable.",
+    "source": "local_seed",
+    "difficulty": "easy"
+  },
+  {
+    "id": "seed-behavioral-1",
+    "category": "behavioral",
+    "subcategory": "failure",
+    "question": "Tell me about a mistake you made and what you learned from it.",
+    "reference_answer": "On one project I underestimated the effort required to migrate a legacy integration and communicated an overly optimistic date. I recognized the risk after an early technical spike, told the team, and worked with the stakeholders to re-plan the delivery into smaller milestones. Since then I validate unknowns earlier and include explicit contingency in estimates.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-behavioral-2",
+    "category": "behavioral",
+    "subcategory": "ambiguity",
+    "question": "Describe a time you had to work with an ambiguous requirement.",
+    "reference_answer": "A product request I received described the desired outcome but not the workflow or success criteria. I interviewed the main users, wrote down assumptions, and proposed a small first version with measurable acceptance criteria. After reviewing it with product and design, I delivered the first slice and used feedback to guide the next iteration.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-behavioral-3",
+    "category": "behavioral",
+    "subcategory": "deadlines",
+    "question": "Tell me about a time you delivered under a tight deadline.",
+    "reference_answer": "A customer needed a high-priority reporting change before a scheduled review. I clarified the must-have behavior, split the work into a small implementation and verification plan, and coordinated with a teammate on testing. We delivered the critical path on time, documented the follow-up improvements, and avoided committing to lower-value extras.",
+    "source": "local_seed",
+    "difficulty": "medium"
+  },
+  {
+    "id": "seed-behavioral-4",
+    "category": "behavioral",
+    "subcategory": "initiative",
+    "question": "Give an example of when you improved a process.",
+    "reference_answer": "Our team repeatedly spent time manually checking the same release information. I mapped the steps, identified which checks could be automated safely, and built a small script with clear failure messages. The process became faster and more consistent, and I documented ownership so the improvement would remain useful after I moved to other work.",
+    "source": "local_seed",
+    "difficulty": "easy"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "session_id": "38903709cf7b46bd906f6af0c4afaa20",
+  "category": "technical",
+  "attempts": [
+    {
+      "id": 5,
+      "session_id": "38903709cf7b46bd906f6af0c4afaa20",
+      "question_id": "hr-1",
+      "category": "hr",
+      "answer": "I built a clean API with clear endpoints and performance tuning to improve reliability and speed for users.",
+      "score": "{'overall_score': 11.12, 'overall_label': 'Needs work', 'priority_improvement': {'dimension': 'completeness', 'score': 0.0, 'label': 'Needs work'}, 'relevance_score': 19.42, 'keyword_coverage': 0.0, 'completeness': 0.0, 'structure': None, 'length': 67.0, 'fluency': 100.0, 'confidence': None, 'strengths': ['You communicate the main idea, but the answer would benefit from more specificity.'], 'gaps': ['The answer should stay more tightly aligned with the question topic.', 'Important concepts are missing: building, business, continuous', 'One or more key points from the model answer are not covered.', 'Expand the answer with more concrete examples and measurable impact.'], 'suggestions': ['Add specifics around: building, business, continuous', 'Lead with your approach, then explain the tradeoff or example that supports it.', 'Give one concrete example or metric showing the outcome of your work.'], 'missing_keywords': ['building', 'business', 'continuous', 'engineer', 'enjoy', 'especially', 'experience', 'features', 'friendly', 'javascript'], 'uncovered_points': ['I am a software engineer with two years of experience building product features in Python and JavaScript.', 'I enjoy translating business requirements into reliable, user-friendly tools and I am especially motivated by teams that value ownership and continuous learning.'], 'missing_structure': ['situation', 'task', 'result'], 'transcript': None}",
+      "created_at": "2026-10-10 18:05:14"
+    }
+  ]
+}

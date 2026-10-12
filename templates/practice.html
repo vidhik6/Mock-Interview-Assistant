@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-heading practice-heading">
+  <div>
+    <p class="eyebrow">Focused practice</p>
+    <h1>Build a stronger answer, one question at a time.</h1>
+    <p class="lede">Choose a mode, answer naturally, and use the feedback to make your next attempt better.</p>
+  </div>
+  <div class="practice-progress" aria-label="Practice progress">
+    <span>SESSION</span>
+    <strong id="attemptCount">0</strong>
+    <small>answers submitted</small>
+  </div>
+</section>
+
+<section class="practice-layout">
+  <div class="practice-main">
+    <div class="practice-toolbar panel">
+      <label>
+        <span class="field-label">Interview mode</span>
+        <select id="categoryFilter">
+          <option value="">All questions</option>
+          <option value="technical">Technical</option>
+          <option value="hr">HR</option>
+          <option value="behavioral">Behavioral</option>
+        </select>
+      </label>
+      <span id="questionCount" class="muted">Loading questions...</span>
+      <button id="nextQuestion" class="button secondary" type="button">New question</button>
+    </div>
+
+    <article class="question-card panel">
+      <div class="question-label"><span>QUESTION</span><span id="questionDifficulty"></span></div>
+      <div id="questionBox" class="question-box"></div>
+      <div class="answer-tip"><strong>Answer tip:</strong> Be specific about your role, actions, and the result you achieved.</div>
+    </article>
+
+    <section class="answer-card panel">
+      <div class="answer-header">
+        <div>
+          <p class="eyebrow">Your response</p>
+          <h2>Take a moment, then answer clearly.</h2>
+        </div>
+        <span id="wordCount" class="muted">0 words</span>
+      </div>
+      <textarea id="answerInput" aria-label="Candidate answer" rows="9" placeholder="Start with your main point, then add one concrete example..."></textarea>
+      <div class="answer-footer">
+        <span class="muted">Tip: Press ⌘/Ctrl + Enter to submit</span>
+        <div class="actions">
+          <button id="micButton" class="button secondary" type="button" aria-pressed="false">Start voice input</button>
+          <button id="clearButton" class="button secondary" type="button">Clear</button>
+          <button id="submitButton" class="button" type="button">Get feedback</button>
+        </div>
+      </div>
+      <div id="transcriptBox" class="transcript" aria-live="polite"></div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+  </div>
+  <aside class="practice-side">
+    <div class="panel side-card">
+      <p class="eyebrow">A simple framework</p>
+      <h2>Make your answer memorable</h2>
+      <ol>
+        <li><strong>Lead</strong> with your answer or point of view.</li>
+        <li><strong>Support</strong> it with one specific example.</li>
+        <li><strong>Close</strong> with the result or what you learned.</li>
+      </ol>
+      <a href="/methodology">How scoring works →</a>
+    </div>
+    <div class="panel side-card">
+      <p class="eyebrow">Keep going</p>
+      <h2>Small improvements compound.</h2>
+      <p class="muted">Your attempts are saved automatically. Review trends and detailed feedback from the History page.</p>
+      <a href="/history">View history →</a>
+    </div>
+  </aside>
+</section>
+<div id="feedback" class="feedback panel hidden"></div>
+<script src="/static/app.js"></script>
+{% endblock %}
